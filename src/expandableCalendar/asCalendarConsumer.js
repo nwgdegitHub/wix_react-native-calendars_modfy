@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import CalendarContext from './calendarContext';
 
-
+//WrappedComponent即ExpandableCalendar
 function asCalendarConsumer(WrappedComponent) {
-  
+
   class CalendarConsumer extends Component {
     render() {
       return (
@@ -21,7 +21,7 @@ function asCalendarConsumer(WrappedComponent) {
     }
   }
 
-  hoistNonReactStatic(CalendarConsumer, WrappedComponent);
+  hoistNonReactStatic(CalendarConsumer, WrappedComponent);//目标组件，原组件
 
   return CalendarConsumer;
 }
